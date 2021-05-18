@@ -5,6 +5,7 @@ requireDir("./tasks");
 
 gulp.task('default',
     gulp.series([
+        "env:development",
         "clean:build",
         gulp.parallel(
             "html",
@@ -19,7 +20,8 @@ gulp.task('default',
 
 gulp.task('build',
     gulp.series([
-        "distBuildPath",
+        "env:production",
+        "build:dist",
         "clean:production",
         gulp.parallel(
             "html",
@@ -32,7 +34,8 @@ gulp.task('build',
 
 gulp.task('migrate',
     gulp.series([
-        "distBuildPath",
+        "env:production",
+        "build:dist",
         "clean:production",
         gulp.parallel(
             "html",

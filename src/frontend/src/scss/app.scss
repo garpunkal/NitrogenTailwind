@@ -1,8 +1,20 @@
-@charset 'utf-8';
-
-// @import 'base/_settings';
-// @import 'base/_base';
-
 @import "tailwindcss/base";
+
+@layer base {
+    h1 {
+      @apply text-2xl;
+    }
+    h2 {
+      @apply text-xl;
+    }
+    h3 {
+      @apply text-lg;
+    }
+    a {
+      @apply text-brand-primary;
+    }
+  }
+
+  
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";

@@ -1,7 +1,12 @@
 const path = require('path');
 const flags = require("./gulpfile.js/config/flags");
+const webpack = require('webpack');
 
-module.exports = {
+module.exports = {  
+  // plugins: [
+  //   new webpack.optimize.LimitChunkCountPlugin({
+  //       maxChunks: 1
+  //   })],
   entry: './src/js/app.js',
   output: {
     filename: 'app.js',

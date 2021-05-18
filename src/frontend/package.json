@@ -19,21 +19,21 @@
   "scripts": {
     "build": "gulp build --minified",
     "migrate": "gulp migrate --minified",
-    "prettier": "prettier --write \"./src/**/*.{scss,js,jsx,json}\"",
     "start": "gulp --sourcemaps"
   },
   "browserslist": [
     "> 1%",
     "IE >= 11"
   ],
-  "prettier": {
-    "tabWidth": 2
-  },
   "dependencies": {
-    "@babel/core": "^7.12.17",
-    "@babel/preset-env": "^7.12.17",
-    "autoprefixer": "^10.2.4",
-    "tailwindcss": "^2.0.3"
+    "@babel/core": "^7.14.0",
+    "@babel/preset-env": "^7.14.1",
+    "@tailwindcss/aspect-ratio": "^0.2.0",
+    "@tailwindcss/forms": "^0.3.2",
+    "@tailwindcss/typography": "^0.4.0",
+    "autoprefixer": "^10.2.5",
+    "gulp-purgecss": "^4.0.3",
+    "tailwindcss": "^2.1.2"
   },
   "devDependencies": {
     "browser-sync": "^2.26.14",
@@ -49,18 +49,18 @@
     "gulp-sass": "^4.1.0",
     "gulp-sourcemaps": "^3.0.0",
     "gulp-util": "^3.0.8",
-    "postcss": "^8.1.10",
-    "postcss-import": "^14.0.0",
+    "postcss": "^8.2.15",
+    "postcss-import": "^14.0.2",
     "postcss-preset-env": "^6.7.0",
     "require-dir": "^1.2.0",
-    "webpack": "^5.23.0",
+    "webpack": "^5.37.0",
     "webpack-stream": "^6.1.2"
   },
   "paths": {
     "base": "./src/",
     "build": "./_build/",
     "dist": "./_dist/",
-    "migrate": "../umbraco/nitrogen.web/assets",
+    "migrate": "../nitrogen.web/assets",
     "html": {
       "source": "./src/html",
       "filter": "/**/*.njk",
